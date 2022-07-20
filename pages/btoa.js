@@ -66,7 +66,7 @@ export default function HomePage() {
           ></textarea>
           <textarea
             id="name2"
-            value={btoa(defaultBuy.price)}
+            value={defaultBuy.price}
             name="name2"
             cols="40"
             rows="5"
