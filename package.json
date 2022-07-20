@@ -7,6 +7,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "btoa-atob": "^0.1.2",
     "mongodb": "^4.1.3",
     "next": "latest",
     "react": "^17.0.2",

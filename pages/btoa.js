@@ -6,8 +6,6 @@ function Header({ title }) {
 }
 
 export default function HomePage() {
-  const names = ['Ada Lovelace', 'Grace Hopper', 'Margaret Hamilton'];
-
   let data = {
     
   }
@@ -66,7 +64,7 @@ export default function HomePage() {
           ></textarea>
           <textarea
             id="name2"
-            value={defaultBuy.price}
+            value={btoa(defaultBuy.price)}
             name="name2"
             cols="40"
             rows="5"
