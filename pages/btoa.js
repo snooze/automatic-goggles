@@ -1,5 +1,6 @@
-// index.html
 import { useState } from 'react';
+import { decode as atob, encode as btoa } from 'base-64'
+
 
 function Header({ title }) {
   return <h1>{title ? title : 'Default title'}</h1>;
@@ -44,7 +45,6 @@ export default function HomePage() {
   }
 
 
-
   return (
     <div>
       <Header title="Base64 Encoder / Decoder" />
@@ -68,6 +68,7 @@ export default function HomePage() {
             name="name2"
             cols="40"
             rows="5"
+            readOnly
           ></textarea>
           <br></br>
           <button onClick={handleClick}>Like ({likes})</button>

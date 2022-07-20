@@ -1,28 +1,8 @@
-// index.html
-import { useState } from 'react';
-function Header({ title }) {
-  return <h1>{title ? title : 'Default title'}</h1>;
-}
+//import { Buffer } from 'buffer';
 
-export default function HomePage() {
-  const names = ['Ada Lovelace', 'Grace Hopper', 'Margaret Hamilton'];
+const buf = Buffer.from('hello world', 'utf8');
 
-  const [likes, setLikes] = useState(0);
-
-  function handleClick() {
-    setLikes(likes + 1);
-  }
-
-  return (
-    <div>
-      <Header title="Develop. Preview. Ship. 🚀" />
-      <ul>
-        {names.map((name) => (
-          <li key={name}>{name}</li>
-        ))}
-      </ul>
-
-      <button onClick={handleClick}>Like ({likes})</button>
-    </div>
-  );
-}
+console.log(buf.toString('hex'));
+// Prints: 68656c6c6f20776f726c64
+console.log(buf.toString('base64'));
+// Prints: aGVsbG8gd29ybGQ=
